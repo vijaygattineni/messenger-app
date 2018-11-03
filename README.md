@@ -1,4 +1,4 @@
-# Meseanger App setup & run steps.
+# Messenger App setup & run steps.
 
 This project was generated with Angular CLI(https://github.com/angular/angular-cli) version 6.0.8. Messenger UI developed on Angular 6.x framework.
 
