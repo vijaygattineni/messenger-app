@@ -1,0 +1,59 @@
+.contact-container {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+}
+.contact-container:hover {
+    background-color: #af93b8;
+    cursor: pointer;
+}
+.name {
+    font-weight: bold;
+}
+.message {
+    color: gray;
+}
+.message-container {
+    padding-top:10px; 
+}
+/*.messages-list .message:nth-child(even) {
+    color: blue;
+    text-align: right;
+}*/
+.recepient{
+    background-color: #834995;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+.user {
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+}
+.contacts {
+    border: solid 2px #834995;    
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    font-weight: bold;
+}
+.messages-list {
+    padding: 15px 5px;
+}
+.no-messages-box {
+    text-align: center;
+    padding-top: 200px;
+    margin-top: 15px;
+    height: 400px;
+    border: solid 2px purple;
+    border-radius: 5px;
+}
+.left-msg {
+    color: cornflowerblue;
+}
+.right-msg {
+    text-align: right;
+    color: mediumpurple;
+}

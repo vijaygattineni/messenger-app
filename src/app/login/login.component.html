@@ -1,0 +1,30 @@
+<div class="login-container">
+  <div class="login-panel">
+    <div id="err-txt-color-name" class="text-danger text-center" *ngIf="loginErrorMessage">
+      <small>{{loginErrorMessage}}</small>
+    </div>
+    <form id="mtrm-login-form" [formGroup]="loginForm" class="form-validate mb-lg" role="form" name="loginForm" novalidate=""
+      (submit)="submitForm(loginForm.value)" autocomplete="off">
+      <div class="form-group has-feedback mb-12 form-group-login-id">
+        <label for="cm-login-useri">User name</label>
+        <input class="form-control input-transparent" id="cm-login-useri" name="userid" placeholder="Enter Login Id" formControlName="userid"
+          type="text" />
+        <div id="err-txt-color-name" class="text-danger" *ngIf="!(loginForm.controls.userid.valid || (loginForm.controls.userid.pristine && !submitted))">
+          <small *ngIf="loginForm.controls.userid.hasError('required')">Username is required</small>
+        </div>
+      </div>
+      <div class="form-group has-feedback mb-12 form-group-password">
+        <label for="cm-login-passwd">Password</label>
+        <input class="form-control input-transparent" id="cm-login-passwd" type='password' name="password" placeholder="Password"
+          formControlName="password" />
+        <div id="err-txt-color-name" class="text-danger" *ngIf="!(loginForm.controls.password.valid || (loginForm.controls.password.pristine && !submitted))">
+          <small *ngIf="loginForm.controls.password.hasError('required')">Password is required</small>
+        </div>
+      </div>
+      <button class="btn btn-block btn-primary submit-btn {{ submissionInProgress ? 'disable-btn': ''}}" type="submit">Login</button>
+      <div class="text-center" *ngIf="submissionInProgress">
+        Loding...
+      </div>
+    </form>
+  </div>
+</div>

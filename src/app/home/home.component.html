@@ -1,0 +1,46 @@
+<div class="home-container col-md-12">
+  <div class="row">
+    <!--Contacts List-->
+    <div class="col-4">
+      <div *ngIf="userDetails && userDetails.user" class="row user">
+        Welcome {{ userDetails.user.full_name }}!
+      </div>
+      <div class="row contacts">
+        Contacts
+      </div>
+      <div *ngFor="let contact of contacts">
+        <div class="row contact-container" (click)="onUserSelect(contact.user)">
+          <div class="col-3">
+            <img style="height:50px; width:50px;" src="../assets/person-icon.png">
+          </div>
+          <div class="col-9">
+            <div class="name">{{contact.user.full_name}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Message Dialog box-->
+    <div class="col-8 message-container" *ngIf="selectedUser && selectedUser.id">
+      <div class="recepient">
+        <img style="height:50px; width:50px;" src="../assets/person-icon.png">
+        <span> {{selectedUser.full_name}}</span>
+      </div>
+      <div class="messages-list">
+        <div *ngFor="let item of chatData" class="message">
+           <div class="{{ (item.sender_id == session.user_id) ? 'right-msg' : 'left-msg'}}">
+            {{item.message}}
+            </div>
+        </div>
+      </div>
+      <div class="input-msg">
+        <div class="form-group">
+          <input (keyup.enter)="onEnter(selectedUser.id, message)" type="text" class="form-control" [(ngModel)]="message" placeholder="Type a Message">
+        </div>
+      </div>
+    </div>
+    <div class="col-8 no-messages-box" [hidden]="selectedUser && selectedUser.id">
+      Go ahead & select a contact!
+    </div>
+  </div>
+</div>

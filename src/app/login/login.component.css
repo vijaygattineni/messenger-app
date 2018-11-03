@@ -1,0 +1,27 @@
+.login-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.login-container>.login-panel {
+  background-color: #edf1f2;
+  border-radius: 5px;
+  width: 400px;
+  padding: 50px;
+}
+input {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.submit-btn {
+    width: 150px;
+    margin: auto;
+    background-color: #834995;
+    border-color: #834995;
+}
+.disable-btn {
+    pointer-events: none;
+    opacity: 0.5;
+}
