@@ -7,6 +7,8 @@ import { Observable, of } from 'rxjs';
 })
 export class QBService {
 
+  _notificationObj = new EventEmitter<any>();
+
   constructor(private http: HttpClient) { }
 
   createDialog(token, occupantId) {

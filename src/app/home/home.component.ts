@@ -25,11 +25,8 @@ export class HomeComponent implements OnInit {
       from: userId,
       body: msg.body
     };
+    this.qbService._notificationObj.emit(this.messageObj);
   }
-
-  file: any;
-  inputFile: any;
-  params: any;
 
   constructor(private qbService: QBService) { }
 
@@ -95,6 +92,12 @@ export class HomeComponent implements OnInit {
             QB.chat.onMessageListener = this.MessagesFromUsers;
           }
         });
+      });
+
+    this.qbService._notificationObj
+      .subscribe((data) => {
+        console.log(data);
+        this.chatData.push({ recipient_id: data.from, message : data.body});
       });
   }
 }
