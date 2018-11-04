@@ -12,7 +12,7 @@ Project have dependencies that require Node 8.9 or higher, together with NPM 5.5
 
 * Clone My Messenger repository
 
-`git clone https://github.com/vijaygattineni/messanger-app.git`
+`git clone https://github.com/vijaygattineni/messenger-app.git`
 
 * Install packages
 
