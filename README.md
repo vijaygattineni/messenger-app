@@ -10,7 +10,7 @@ Project have dependencies that require Node 8.9 or higher, together with NPM 5.5
 
 `npm install -g angular-cli@6.0.8`
 
-* Clone Boneal repository
+* Clone My Messenger repository
 
 `git clone https://github.com/vijaygattineni/messanger-app.git`
 
