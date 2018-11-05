@@ -3,6 +3,7 @@ import { QBService } from '../services/qb.service';
 import { Observable } from 'rxjs';
 declare var QB: any;
 import { qbEndpoints, qbAccount } from '../core/qb.config';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -69,6 +70,8 @@ export class HomeComponent implements OnInit {
         console.log('Dialog response', data);
         this.dialogId = data._id;
         this.retriveMessage();
+        setTimeout(function() { $('.messages-list').scrollTop($('.messages-list')[0].scrollHeight); }
+        , 1000);
       });
   }
 
@@ -96,8 +99,9 @@ export class HomeComponent implements OnInit {
 
     this.qbService._notificationObj
       .subscribe((data) => {
-        console.log(data);
-        this.chatData.push({ recipient_id: data.from, message : data.body});
+        if (data.from ===  this.selectedUser.id) {
+          this.chatData.push({ recipient_id: data.from, message : data.body});
+        }
       });
   }
 }
