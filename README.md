@@ -40,10 +40,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Credentials to acces application
 User1 
-User Name: vijaygattineni
-password: Innominds123
+User Name: `vijaygattineni`
+password: `Innominds123`
 
 User 2 
-User Name: kumar
-password: Suresh12
+User Name: `kumar`
+password: `Suresh12`
 
