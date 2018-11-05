@@ -1,5 +1,5 @@
 <div class="header-container">
   <div class="logo">My Messenger
-    <span style="float:right" *ngIf="router.url === '/home'"><i class="fa fa-power-off"></i></span>
+    <span style="float:right" *ngIf="router.url === '/home'" (click)="logout()"><i class="fa fa-power-off"></i></span>
   </div>
 </div>

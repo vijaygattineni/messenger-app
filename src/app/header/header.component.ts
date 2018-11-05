@@ -10,6 +10,12 @@ export class HeaderComponent implements OnInit {
 
   constructor(public router: Router) { }
 
+  logout() {
+    sessionStorage.removeItem('session');
+    sessionStorage.removeItem('pass');
+    sessionStorage.removeItem('uname');
+    this.router.navigate(['login']);
+  }
   ngOnInit() {
   }
 
