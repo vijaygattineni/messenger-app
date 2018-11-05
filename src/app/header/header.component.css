@@ -6,3 +6,6 @@
     font-size: 20px;
     padding: 20px ;
 }
+.fa-power-off:hover {
+    cursor: pointer;
+}

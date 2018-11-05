@@ -41,6 +41,8 @@
 }
 .messages-list {
     padding: 15px 5px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 .no-messages-box {
     text-align: center;
@@ -56,4 +58,10 @@
 .right-msg {
     text-align: right;
     color: mediumpurple;
+}
+.read {
+    color: dodgerblue;
+}
+.unread {
+    color: lightgray;
 }

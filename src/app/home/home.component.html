@@ -30,6 +30,7 @@
         <div *ngFor="let item of chatData" class="message">
            <div class="{{ (item.sender_id == session.user_id) ? 'right-msg' : 'left-msg'}}">
             {{item.message}}
+            <i *ngIf="item.sender_id == session.user_id" class="fa fa-check-square {{ (item.read > 0) ? 'read': 'unread' }}"></i>            
             </div>
         </div>
       </div>
