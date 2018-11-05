@@ -22,6 +22,9 @@ navigate to project folder, run `npm install`
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+If you see "You have to be inside an angular-cli project in order to use the serve command" error message try 
+`npm start`
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
